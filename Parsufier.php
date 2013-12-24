@@ -127,7 +127,7 @@ class Parsufier {
                 $this->imageFileUrl = $matches[1];
                 $this->items['image'] = $this->imageFileUrl;
 				
-				$this->content = preg_replace( $this->imageUrlRegex, '', $this->content);
+		$this->content = preg_replace( $this->imageUrlRegex, '', $this->content);
 
                 if (preg_match( $this->newsCodeRegex, $this->url, $matches) == 1) {
                     
