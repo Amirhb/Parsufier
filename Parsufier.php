@@ -87,22 +87,22 @@ class Parsufier {
 
     public function parse(  $url, $newsClass, $filesAddr) {
 
-		$this->items = array();
-		
-		$this->url = $url;
-		$this->newsClass = $newsClass;
-        	$this->folderPath = $filesAddr;
-		
-		$shd = new SimpleHTMLDOM;
-		$html = $shd->file_get_html( $this->url);
-		$body = $html->find( $this->newsClass);
-		$body = implode( '', $body);	
-		$this->content = $body;
+	$this->items = array();
+	
+	$this->url = $url;
+	$this->newsClass = $newsClass;
+	$this->folderPath = $filesAddr;
+	
+	$shd = new SimpleHTMLDOM;
+	$html = $shd->file_get_html( $this->url);
+	$body = $html->find( $this->newsClass);
+	$body = implode( '', $body);	
+	$this->content = $body;
 
         $this->cssEliminator( $this->content);
 
         if( isset( $this->titleRegex)) {
-            if (preg_match($this->titleRegex, $this->content, $matches) == 1) {
+            if ( preg_match( $this->titleRegex, $this->content, $matches) == 1) {
 
                 $this->title = $matches[1];
                 $this->content = preg_replace( $this->titleRegex, '', $this->content);
