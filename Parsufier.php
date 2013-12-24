@@ -129,14 +129,14 @@ class Parsufier {
 				
 		$this->content = preg_replace( $this->imageUrlRegex, '', $this->content);
 
-                if (preg_match( $this->newsCodeRegex, $this->url, $matches) == 1) {
+                if ( preg_match( $this->newsCodeRegex, $this->url, $matches) == 1) {
                     
                     $this->newsCode = $matches[1];
-                    if (preg_match('/[^"]+\.(\w{3,})/', $this->imageFileUrl, $matches) == 1) {
+                    if ( preg_match('/[^"]+\.(\w{3,})/', $this->imageFileUrl, $matches) == 1) {
 
                         $extension = $matches[1];
                         $this->imageFileName = $this->source.'_'.$this->newsCode.'.'.$extension;
-						copy( $this->imageFileUrl, $this->folderPath.'/../files/'.$this->imageFileName);
+			copy( $this->imageFileUrl, $this->folderPath.'/../files/'.$this->imageFileName);
                         $this->items['image'] = $this->imageFileName;
                     }
             }
