@@ -41,7 +41,7 @@ class Parsufier {
         $this->source = $site;
     }
 	
-	public function getSource() {
+    public function getSource() {
 
         return $this->source;
     }
@@ -51,7 +51,7 @@ class Parsufier {
         $this->titleRegex = $regex;
     }
 	
-	public function getTitleRegex() {
+    public function getTitleRegex() {
 
         return $this->titleRegex;
     }
@@ -61,7 +61,7 @@ class Parsufier {
         $this->leadContRegex = $regex;
     }
 	
-	public function getLeadContRegex() {
+    public function getLeadContRegex() {
 
         return $this->leadContRegex;
     }
@@ -71,7 +71,7 @@ class Parsufier {
         $this->imageUrlRegex = $regex;
     }
 	
-	public function getImageUrlRegex() {
+    public function getImageUrlRegex() {
 
         return $this->imageUrlRegex;
     }
