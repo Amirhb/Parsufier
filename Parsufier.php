@@ -20,8 +20,8 @@ class Parsufier {
     private $titleRegex;
     private $leadContRegex;
     private $imageUrlRegex;
-	private $url;
-	private $newsClass;
+    private $url;
+    private $newsClass;
     private $content;
     private $folderPath;
     private $items = array();
