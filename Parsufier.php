@@ -91,7 +91,7 @@ class Parsufier {
 		
 		$this->url = $url;
 		$this->newsClass = $newsClass;
-        $this->folderPath = $filesAddr;
+        	$this->folderPath = $filesAddr;
 		
 		$shd = new SimpleHTMLDOM;
 		$html = $shd->file_get_html( $this->url);
