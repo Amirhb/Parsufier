@@ -1,11 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
  * Developed by: Amir Hossein Babaeian
- * github: Amirh
+ * github: Amirhb/Parsufier/
  * Email: amirh.babaeian@gmail.com
- * Date: 12/16/13
- * Time: 3:37 PM
 
  */
 
@@ -88,14 +85,6 @@ class Parsufier {
 
     }
 
- /*   private function getImageFileName() {
-
-    //    $host = parse_url($url)['host'];
-    //    preg_replace( '/\.(.*)\./', '$1', $host);
-        $fileName = $this->source.'_'.$this->newsCode;
-        return $fileName;
-    }
-*/
     public function parse(  $url, $newsClass, $filesAddr) {
 
 		$this->items = array();
